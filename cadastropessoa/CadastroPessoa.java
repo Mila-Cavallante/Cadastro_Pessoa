@@ -17,14 +17,41 @@ public class CadastroPessoa {
        Pessoa p2 = new Pessoa();
        p2.setNome("Maria");
        p2.setEndereço("Rua Marte");
-       p2.setTelefone("9987-6543");
-       p2.setIdade(28);
+       p2.setTelefone("99987-6543");
+       p2.setIdade(37);
        
-       CadastraPessoa cadastro= new CadastraPessoa();
+       Pessoa p3 = new Pessoa();
+       p3.setNome("Sabrina");
+       p3.setEndereço("Rua Plutão");
+       p3.setTelefone("4002-8922");
+       p3.setIdade(56);
+       
+       Pessoa p4 = new Pessoa();
+       p4.setNome("Anderson");
+       p4.setEndereço("Rua Vênus");
+       p4.setTelefone("3363-1997");
+       p4.setIdade(45);
+       
+       CadastraPessoa cadastro= new CadastraPessoa();//Insert
        cadastro.addPessoa(p1);
        cadastro.addPessoa(p2);
+       cadastro.addPessoa(p3);
+       cadastro.addPessoa(p4);
        
-       cadastro.imprimirPessoa();
+       System.out.println(cadastro.imprimirPessoa());
+              
+       cadastro.RemovePessoa(p2);//Delete
+       
+       System.out.println(cadastro.imprimirPessoa());
+       
+       p1.setIdade(22);//Update
+       cadastro.AtualizarPessoa(p1);//Update
+       
+       System.out.println(cadastro.imprimirPessoa());
+       
+       cadastro.buscaPessoa("Matheus");//Select
+        
     }
   
 }
+
